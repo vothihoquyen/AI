@@ -1,16 +1,16 @@
 package model;
 
 public class OCo {
-	private int viTri; 
-	private int giaTri; 
-	private boolean isQuan; 
+	private int viTri;
+	private int giaTri;
+	private boolean isQuan;
 
 	public OCo(int viTri, int giaTri, boolean isQuan) {
 		this.viTri = viTri;
 		this.giaTri = giaTri;
 		this.isQuan = isQuan;
 	}
-	
+
 	public int getGiaTri() {
 		return giaTri;
 	}
@@ -42,6 +42,6 @@ public class OCo {
 		} else {
 			quan = " là quan";
 		}
-		return "Vị trí: "+viTri+quan;
+		return "Vị trí: " + viTri + quan;
 	}
 }

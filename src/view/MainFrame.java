@@ -13,11 +13,8 @@ public class MainFrame extends JFrame{
 	public static void startActivity(JPanel panel) {
 		mainFrame.getContentPane().removeAll();
 		mainFrame.add(panel);
-		mainFrame.setSize(970, 650);
-//		mainFrame.setSize(1378, 720);
+		mainFrame.setSize(980, 690);
 		mainFrame.setVisible(true);
-//		mainFrame.setLocationRelativeTo(null);
-//		mainFrame.setResizable(false);
 		mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 	

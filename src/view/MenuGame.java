@@ -23,9 +23,12 @@ public class MenuGame extends JPanel implements Runnable, MouseListener, MouseMo
 	private Thread thread;
 
 	public MenuGame() {
-		easy = new ButtonRectangle(X, Y + 100, WIDTH, HEIGHT, "easyDefault.png", "easyEntered.png", "easyPressed.png", 1);
-		normal = new ButtonRectangle(X, Y + 200, WIDTH, HEIGHT, "normalDefault.png", "normalEntered.png", "normalPressed.png", 2);
-		hard = new ButtonRectangle(X, Y + 300, WIDTH, HEIGHT, "hardDefault.png", "hardEntered.png", "hardPressed.png", 3);
+		easy = new ButtonRectangle(X, Y + 100, WIDTH, HEIGHT, "easyDefault.png", "easyEntered.png", "easyPressed.png",
+				1);
+		normal = new ButtonRectangle(X, Y + 200, WIDTH, HEIGHT, "normalDefault.png", "normalEntered.png",
+				"normalPressed.png", 2);
+		hard = new ButtonRectangle(X, Y + 300, WIDTH, HEIGHT, "hardDefault.png", "hardEntered.png", "hardPressed.png",
+				3);
 
 		addMouseListener(this);
 		addMouseMotionListener(this);
@@ -56,9 +59,11 @@ public class MenuGame extends JPanel implements Runnable, MouseListener, MouseMo
 		hard.draw(g2d);
 		g2d.drawImage(loadImage("tieude.png"), 280, 40, null);
 		g2d.setColor(Color.decode("#832411"));
-		g2d.setFont(new Font("Brush Script MT", Font.CENTER_BASELINE, 20));
-		g2d.drawString("Dao Thi Thu Anh", 60, 595);
-		g2d.drawString("Nguyen Van Thien Tai", 60, 615);
+		g2d.setFont(new Font("Courier New", Font.CENTER_BASELINE, 20));
+		String[] authors = { "Võ Thị Hồ Quyên", "Nguyễn Tuấn Vũ", "Hoàng Thị Cẩm Hồng", "Võ Nguyễn Hữu Nhân" };
+		for (int i = 0; i < authors.length; i++) {
+			g2d.drawString(authors[i], 70, 575 + 20 * i);
+		}
 		g2d.drawImage(loadImage("bamboo.png"), 750, -50, 450, 700, null);
 		g2d.drawImage(loadImage("bamboo1.png"), -270, -50, 450, 700, null);
 	}

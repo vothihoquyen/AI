@@ -39,12 +39,12 @@ public class Game {
 
 			banCo.setResults(new ArrayList<>());
 			System.out.println("Điểm computer: " + oCo[12].getGiaTri());
-			System.out.println("Điểm người chơi: " + oCo[13].getGiaTri());
+			System.out.println("Điểm Người chơi: " + oCo[13].getGiaTri());
 			banCo.printBanCo();
 			int viTri = 0;
 			if (chon) {
 				if (player == 2) {
-					System.out.print("Người chơi 2 chọn [Vị trí] = ");
+					System.out.print("Người chơi 2 chọn vị trí = ");
 					String s = scanner.nextLine();
 					try {
 						viTri = Integer.parseInt(s.substring(1, s.length()));
@@ -53,7 +53,7 @@ public class Game {
 						continue;
 					}
 					if (!banCo.kiemTra(viTri, player)) {
-						System.err.println("Người chơi 2 không được chọn ô này");
+						System.err.println("Người chơi 2 không chắc chắn ô này");
 						continue;
 					}
 					if (s.substring(0, 1).equals("l")) {
@@ -88,7 +88,7 @@ public class Game {
 			} else {
 
 				if (player == 2) {
-					System.out.print("Người chơi 2 chọn [Vị trí] = ");
+					System.out.print("Người chơi 2 chọn vị trí = ");
 					String s = scanner.nextLine();
 					try {
 						viTri = Integer.parseInt(s.substring(1, s.length()));
@@ -97,7 +97,7 @@ public class Game {
 						continue;
 					}
 					if (!banCo.kiemTra(viTri, player)) {
-						System.err.println("Người chơi 2 không được chọn ô này");
+						System.err.println("Người chơi 2 không chắc chắn ô này");
 						continue;
 					}
 					if (s.substring(0, 1).equals("l")) {
@@ -111,7 +111,7 @@ public class Game {
 					}
 				} else {
 
-					System.out.print("Người chơi 1 chọn [Vị trí] = ");
+					System.out.print("Người chơi 1 chọn vị trí = ");
 					String s = scanner.nextLine();
 					try {
 						viTri = Integer.parseInt(s.substring(1, s.length()));
@@ -120,7 +120,7 @@ public class Game {
 						continue;
 					}
 					if (!banCo.kiemTra(viTri, player)) {
-						System.err.println("Người chơi 2 không được chọn ô này");
+						System.err.println("Người chơi 2 không chắc chắn ô này");
 						continue;
 					}
 					if (s.substring(0, 1).equals("l")) {
@@ -149,8 +149,8 @@ public class Game {
 		banCo.themDiemSo(1);
 		banCo.themDiemSo(2);
 		
-		System.out.println("Điểm computer: " + oCo[12].getGiaTri());
-		System.out.println("Điểm người chơi: " + oCo[13].getGiaTri());
+		System.out.println("Lượt computer: " + oCo[12].getGiaTri());
+		System.out.println("Lượt Người chơi: " + oCo[13].getGiaTri());
 		if (oCo[12].getGiaTri() > oCo[13].getGiaTri()) {
 			System.out.println("Computer thắng");
 		} else if (oCo[12].getGiaTri() < oCo[13].getGiaTri()) {

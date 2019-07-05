@@ -24,7 +24,6 @@ public class BanCo {
 		oCo[13] = new OCo(13, 0, false);
 	}
 
-	// hanh dong
 	public int hanhDong(int hanhDong, int viTri) {
 		if (hanhDong == 1) {
 			return quaTrai(viTri);
@@ -49,7 +48,7 @@ public class BanCo {
 		return s;
 	}
 
-	// trả về vị trí sau khi đi qua trái
+	// tráº£ vá»� vá»‹ trĂ­ sau khi Ä‘i qua trĂ¡i
 	public int quaTrai(int viTri) {
 		int giaTri = oCo[viTri].getGiaTri();
 		oCo[viTri].setGiaTri(0);
@@ -62,9 +61,6 @@ public class BanCo {
 			}
 			oCo[viTri].setGiaTri(oCo[viTri].getGiaTri() + 1);
 			giaTri--;
-			// System.out.println("Vitri: " + viTri);
-			// System.out.println("Di chuyển sang trái");
-			// printBanCo();
 			Result result = new Result(adapter(oCo));
 			results.add(result);
 		}
@@ -79,7 +75,7 @@ public class BanCo {
 		}
 	}
 
-	// vi tri đó có ăn được hay ko
+	// vi tri Ä‘Ă³ cĂ³ Äƒn Ä‘Æ°á»£c hay ko
 	public boolean anDuocKhong(int viTri) {
 		if (oCo[viTri].getGiaTri() == 0 && (viTri != 0 || viTri != 6)) {
 			return true;
@@ -87,7 +83,7 @@ public class BanCo {
 		return false;
 	}
 
-	// trả về vị trí sau khi đi qua phải
+	// tráº£ vá»� vá»‹ trĂ­ sau khi Ä‘i qua pháº£i
 	public int quaPhai(int viTri) {
 		int giaTri = oCo[viTri].getGiaTri();
 		oCo[viTri].setGiaTri(0);
@@ -100,9 +96,6 @@ public class BanCo {
 			}
 			oCo[viTri].setGiaTri(oCo[viTri].getGiaTri() + 1);
 			giaTri--;
-			// System.out.println("Vị trí: " + viTri);
-			// System.out.println("Di chuyển sang phải");
-			// printBanCo();
 			Result result = new Result(adapter(oCo));
 			results.add(result);
 		}
@@ -124,11 +117,8 @@ public class BanCo {
 				viTri = 0;
 			}
 			if (oCo[viTri].getGiaTri() != 0) {
-				// System.out.println("[quaTrai]Ăn tại vị trí: " + viTri);
 				int diemSo = oCo[viTri].getGiaTri();
-				// System.out.println(diemSo);
 				oCo[viTri].setGiaTri(0);
-				// printBanCo();
 				Result result = new Result(adapter(oCo));
 				results.add(result);
 				viTri++;
@@ -152,10 +142,8 @@ public class BanCo {
 				viTri = 11;
 			}
 			if (oCo[viTri].getGiaTri() != 0) {
-				// System.out.println("[quaPhai]Ăn tại vị trí: " + viTri);
 				int diemSo = oCo[viTri].getGiaTri();
 				oCo[viTri].setGiaTri(0);
-				// printBanCo();
 				Result result = new Result(adapter(oCo));
 				results.add(result);
 				viTri--;
@@ -174,7 +162,6 @@ public class BanCo {
 
 	public boolean finish() {
 		if (oCo[0].getGiaTri() == 0 && oCo[6].getGiaTri() == 0) {
-			// System.out.println("Game over");
 			return true;
 		}
 		if (oCo[12].getGiaTri() == 0) {
@@ -191,7 +178,6 @@ public class BanCo {
 		return false;
 	}
 
-	// kiem tra ô đó có đc dùng hay ko
 	public boolean kiemTra(int viTri, int player) {
 		if (player == 1) {
 			if (viTri != 1 && viTri != 2 && viTri != 3 && viTri != 4 && viTri != 5) {
@@ -211,7 +197,6 @@ public class BanCo {
 		return true;
 	}
 
-	// cộng điểm sau khi hết game (toàn dân kéo về)
 	public int themDiemSo(int player) {
 		int diemSo = 0;
 		if (player == 1) {
@@ -251,7 +236,6 @@ public class BanCo {
 		return false;
 	}
 
-	// rải quân sau khi hết quân nhưng vẫn còn quan
 	public int raiQuan(int player) {
 		if (player == 1) {
 			int diemSo = oCo[12].getGiaTri();

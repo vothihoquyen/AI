@@ -27,7 +27,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
 	private Thread thread;
 	private BanCo board;
 	private VeBanCo banCo;
-	// private AlphaBeta alphaBeta;
 	private Minimax minimax;
 	private int player = 2;
 	private int index = 0;
@@ -523,7 +522,6 @@ public class GamePanel extends JPanel implements Runnable, MouseListener, MouseM
 		raiQuan = false;
 		board = new BanCo();
 		banCo = new VeBanCo(board.getOCo());
-		// alphaBeta = new AlphaBeta();
 		minimax = new Minimax();
 		player = 2;
 		addMouseListener(this);
